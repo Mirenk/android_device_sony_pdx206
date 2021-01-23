@@ -24,6 +24,11 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Inherit from common.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Inherit some common Pixel Experience stuff
+TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+
 PRODUCT_BRAND := Sony
 PRODUCT_DEVICE := pdx206
 PRODUCT_MANUFACTURER := Sony
