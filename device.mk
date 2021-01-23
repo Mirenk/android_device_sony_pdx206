@@ -54,7 +54,3 @@ PRODUCT_COPY_FILES += \
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
-
-PRODUCT_BUILD_SUPER_PARTITION := false
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
