@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 29
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
