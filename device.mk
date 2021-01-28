@@ -29,11 +29,6 @@ $(call inherit-product, vendor/sony/pdx206/pdx206-vendor.mk)
 # Inherit from common
 $(call inherit-product, device/sony/edo-common/edo.mk)
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pe
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
