@@ -19,20 +19,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Inherit from common.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common Pixel Experience stuff
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
+# Inherit some common EVOX stuff
+WITH_GAPPS := true
+EVO_BUILD_TYPE := UNOFFICIAL
+EVO_MAINTAINER := EggOxygen
 
 PRODUCT_BRAND := Sony
 PRODUCT_DEVICE := pdx206
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_NAME := aosp_pdx206
+PRODUCT_NAME := evolution_pdx206
 PRODUCT_MODEL := Xperia 5 II
 
 PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
