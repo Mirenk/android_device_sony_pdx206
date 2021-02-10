@@ -8,8 +8,11 @@
 
 set -e
 
-DEVICE_COMMON=pdx206
-VENDOR=sony
+# Required!
+export DEVICE_COMMON=pdx206
+export VENDOR=sony
+
+export DEVICE_BRINGUP_YEAR=2020
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -63,11 +66,8 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-    lib64/libwfdnative.so)
+    system_ext/lib64/libwfdnative.so)
         sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
-        ;;
-    product/lib64/libdpmframework.so)
-        sed -i "s/libhidltransport.so/libcutils-v29.so\x00\x00\x00/" "${2}"
         ;;
     esac
 }

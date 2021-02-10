@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2018-2020 The LineageOS Project
+# Copyright (C) 2021 The PixelExperience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,13 +19,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
 # Inherit from common.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit some common Pixel Experience stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
@@ -40,6 +39,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
 TARGET_VENDOR_PRODUCT_NAME := pdx206
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="Sony/pdx206/pdx2062 10 QKQ1.200108.002 1:user release-keys"
+    PRIVATE_BUILD_DESC="XQ-AS72-user 11 58.1.A.1.178 058001A001017802673273826 release-keys"
 
-BUILD_FINGERPRINT := Sony/pdx206/pdx206:10/QKQ1.200108.002/1:user/release-keys
+BUILD_FINGERPRINT := Sony/XQ-AS72/XQ-AS72:11/58.1.A.1.178/058001A001017802673273826:user/release-keys

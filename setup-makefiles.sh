@@ -27,7 +27,7 @@ source "${HELPER}"
 # Initialize the helper for common
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
-# Warning headers and guards
+# Copyright headers and common guards
 write_headers "pdx206"
 
 # The standard common blobs

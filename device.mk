@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2021 The PixelExperience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,9 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 29
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
