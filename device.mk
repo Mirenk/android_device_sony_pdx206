@@ -27,6 +27,9 @@ $(call inherit-product, vendor/sony/pdx206/pdx206-vendor.mk)
 # Inherit from common
 $(call inherit-product, device/sony/edo-common/edo.mk)
 
+# Xperia Common
+$(call inherit-product, device/sony/xperia-common/xperia.mk)
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
@@ -37,7 +40,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    SemcCameraUI
+    Snap
 
 # DTBO
 LOCAL_DTB := $(LOCAL_PATH)/prebuilt/dtb.img
@@ -45,7 +48,4 @@ LOCAL_DTB := $(LOCAL_PATH)/prebuilt/dtb.img
 PRODUCT_COPY_FILES += \
     $(LOCAL_DTB):dtb.img
 
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
 
