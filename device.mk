@@ -30,8 +30,11 @@ $(call inherit-product, device/sony/edo-common/edo.mk)
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
+    
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-pe
 
-# Using Sony Vendor Camera
 # Camera
 PRODUCT_PACKAGES += \
     SemcCameraUI
