@@ -22,7 +22,6 @@ persist.vendor.cne.feature=1
 persist.vendor.dpm.feature=9
 
 # Dual SIM
-ro.boot.product.hardware.sku=ds
 persist.radio.multisim.config=dsds
 
 # IMS
