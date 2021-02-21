@@ -28,8 +28,7 @@ TARGET_SCREEN_DENSITY := 417
 # Kernel
 BOARD_KERNEL_CMDLINE += buildproduct=pdx206
 BOARD_KERNEL_CMDLINE += androidboot.product.hardware.sku=ds
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+TARGET_KERNEL_CONFIG := lineage_pdx206_defconfig
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
